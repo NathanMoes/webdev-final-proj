@@ -51,21 +51,30 @@ function App() {
         </p>
       </Container>
       <br />
-      <Container>
-        <Row className="justify-content-center">
-          <Col Lg={{ span: 4, offset: 4 }}>
+      <Container className="box-size">
+        <Row>
+          <Col>
             <Form className="">
               <h2>Contact Me</h2>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group
+                className="mb-3 form-input"
+                controlId="formBasicEmail"
+              >
                 <Form.Label>Name</Form.Label>
                 <Form.Control type="email" placeholder="Your name" />
               </Form.Group>
 
-              <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Group
+                className="mb-3 form-input"
+                controlId="formBasicPassword"
+              >
                 <Form.Label>Email:</Form.Label>
                 <Form.Control type="password" placeholder="Your email" />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicCheckbox">
+              <Form.Group
+                className="mb-3 form-input"
+                controlId="formBasicCheckbox"
+              >
                 <Form.Control
                   type="text"
                   as="textarea"
