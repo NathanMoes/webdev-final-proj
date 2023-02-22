@@ -20,13 +20,13 @@ import {
 function App() {
   return (
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" sticky="top">
         <Container>
           <Navbar.Brand href="#home">Home</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#about">About</Nav.Link>
             <Nav.Link href="#features">Projects</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#contactMe">Contact</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -51,7 +51,32 @@ function App() {
         </p>
       </Container>
       <br />
-      <Container className="box-size">
+      <Container>
+        <Row>
+          <Col>
+            <p>
+              <b>Gif search (TypeScript, React, Ionic)</b>
+              <br />
+              Created a website using the Giphy api to search for gifs by query,
+              and to view popular/trending gifs hosted on the giphy database.
+            </p>
+            <p>
+              <b>PSU Walk-tober (TypeScript, React, Ionic, Firebase)</b>
+              <br />
+              Worked with a team to create a replacement for the current
+              walk-tober system. As the current system is based on chalenge
+              runer, and lacks many features as well as visual refinement.
+            </p>
+            <p>
+              <b>Something else</b>
+              <br />
+              More info
+            </p>
+          </Col>
+        </Row>
+      </Container>
+      <br />
+      <Container className="box-size" id="contactMe">
         <Row>
           <Col>
             <Form className="">
@@ -89,6 +114,7 @@ function App() {
           </Col>
         </Row>
       </Container>
+      <br />
     </>
   );
 }
