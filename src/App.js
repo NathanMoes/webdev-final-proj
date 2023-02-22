@@ -1,10 +1,21 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Button } from "bootstrap";
-import Image from "react-bootstrap/Image";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+// import Button from "react-bootstrap/Button";
+// import Image from "react-bootstrap/Image";
+// import Container from "react-bootstrap/Container";
+// import Nav from "react-bootstrap/Nav";
+// import Navbar from "react-bootstrap/Navbar";
+// import Form from "react-bootstrap/Form";
+import {
+  Button,
+  Image,
+  Container,
+  Nav,
+  Navbar,
+  Form,
+  Row,
+  Col,
+} from "react-bootstrap";
 
 function App() {
   return (
@@ -38,6 +49,36 @@ function App() {
           to search for gifs using the giphy api, and to display the current
           most treding gifs on a seperate tab.{" "}
         </p>
+      </Container>
+      <br />
+      <Container>
+        <Row className="justify-content-center">
+          <Col Lg={{ span: 4, offset: 4 }}>
+            <Form className="">
+              <h2>Contact Me</h2>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Name</Form.Label>
+                <Form.Control type="email" placeholder="Your name" />
+              </Form.Group>
+
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Email:</Form.Label>
+                <Form.Control type="password" placeholder="Your email" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                <Form.Control
+                  type="text"
+                  as="textarea"
+                  placeholder="enter optional message"
+                  className="pb-5"
+                ></Form.Control>
+              </Form.Group>
+              <Button variant="primary" type="submit" className="">
+                Submit
+              </Button>
+            </Form>
+          </Col>
+        </Row>
       </Container>
     </>
   );
