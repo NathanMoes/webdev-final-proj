@@ -18,6 +18,20 @@ function App() {
           </Nav>
         </Container>
       </Navbar>
+      <Container>
+        <img src="../resources/NathanMoes"></img>
+        <p>
+          I am a PSU student with my bachlors of science in comuter science. I
+          will be continuing on to my masters in the fall of 2024. I am
+          interested in fullstack developemnt, android/ios developemnt and
+          ai/ml. I have worked on many small projects related to webdevelopment
+          and am currently working on more. With the same being said for android
+          and ai/ml projects. As well as some small python projects. Most
+          recently I worked on creating a web application that allows for users
+          to search for gifs using the giphy api, and to display the current
+          most treding gifs on a seperate tab.{" "}
+        </p>
+      </Container>
     </>
   );
 }
