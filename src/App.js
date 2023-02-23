@@ -91,6 +91,22 @@ function App() {
             </p>
           </Col>
         </Row>
+        <Row>
+          <Col>
+            <b>
+              <p className="ed">Programing Languages</p>
+            </b>
+          </Col>
+        </Row>
+        <Row className="mx-3">
+          <Col>
+            <p className="lang-list">C/C++</p>
+            <p className="lang-list">Python</p>
+            <p className="lang-list">Java</p>
+            <p className="lang-list">Javascript/TypeScript</p>
+            <p className="lang-list">HTML/XML/CSS</p>
+          </Col>
+        </Row>
       </Container>
       <br />
       <Container>
