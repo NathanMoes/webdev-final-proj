@@ -181,6 +181,21 @@ function App() {
                     </a>
                   </small>
                 </p>
+
+                <p>
+                  <b>
+                    Housing price predictor{" "}
+                    <a href="https://github.com/NathanMoes/CS445_group_project_housing">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </b>
+                  <br />
+                  <small className="mx-3">
+                    Worked on a group project to predict housing prices based on
+                    a some sample data. Done with multiple methods reflected in
+                    ML.
+                  </small>
+                </p>
               </Col>
             </Row>
           </Container>
