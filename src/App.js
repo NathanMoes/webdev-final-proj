@@ -46,20 +46,20 @@ function App() {
           <Navbar.Brand href="#home">Home</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link href="#features">Projects</Nav.Link>
+            <Nav.Link href="#projects">Projects</Nav.Link>
             <Nav.Link href="#contactMe">Contact</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
-      <Container id="about">
+      <Container id="about" className="d-flex mt-3">
         <Image
           src="https://avatars.githubusercontent.com/u/91927252?v=4"
           alt="Nathan Moes selfie"
-          className=""
+          className="mx-0"
           thumbnail={true}
           roundedCircle={true}
         ></Image>
-        <p>
+        <p className="mt-5 mx-5 bio">
           I am a PSU student with my bachlors of science in comuter science. I
           will be continuing on to my masters in the fall of 2024. I am
           interested in fullstack developemnt, android/ios developemnt and
@@ -68,7 +68,7 @@ function App() {
           and ai/ml projects. As well as some small python projects. Most
           recently I worked on creating a web application that allows for users
           to search for gifs using the giphy api, and to display the current
-          most treding gifs on a seperate tab.{" "}
+          most treding gifs on a seperate tab.
         </p>
       </Container>
       <br />
@@ -109,7 +109,7 @@ function App() {
         </Row>
       </Container>
       <br />
-      <Container>
+      <Container id="projects">
         <Row>
           <Col>
             <p>
