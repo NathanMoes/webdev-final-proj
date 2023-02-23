@@ -182,7 +182,7 @@ function App() {
               <a href="https://github.com/NathanMoes">
                 <i class="fa-brands fa-github fa-2xl mx-3"></i>
               </a>
-              <a href="nathanmoes7@gmail.com">
+              <a href="mailto:nathanmoes7@gmail.com">
                 <i class="fa-solid fa-envelope fa-2xl mx-3"></i>
               </a>
             </Col>
