@@ -35,8 +35,8 @@ const analytics = getAnalytics(app);
 function App() {
   return (
     <>
-      <div className="d-flex justify-content-center mx-0 my-0">
-        <Container className="mx-0 mt-0 ">
+      <div className="d-flex justify-content-center mx-0 my-0 main">
+        <Container className="mx-0 mt-0 main-content">
           <Navbar bg="dark" variant="dark" sticky="top">
             <Container className="d-flex flex-row justify-content-start">
               <Navbar.Brand href="#home">Home</Navbar.Brand>
@@ -49,7 +49,7 @@ function App() {
           </Navbar>
           <Container id="about" className="mt-3">
             <Row>
-              <Col>
+              <Col sm="12" md="12" lg="6">
                 <Image
                   src="https://avatars.githubusercontent.com/u/91927252?v=4"
                   alt="Nathan Moes selfie"
@@ -58,7 +58,7 @@ function App() {
                   roundedCircle={true}
                 ></Image>
               </Col>
-              <Col>
+              <Col sm="12" md="12" lg="6">
                 <p className="mt-5 ml-5 bio">
                   I am a PSU student with my bachlors of science in comuter
                   science. I will be continuing on to my masters in the fall of
