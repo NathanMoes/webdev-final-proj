@@ -86,7 +86,7 @@ function App() {
                 controlId="formBasicEmail"
               >
                 <Form.Label>Name</Form.Label>
-                <Form.Control type="email" placeholder="Your name" />
+                <Form.Control type="text" placeholder="Your name" />
               </Form.Group>
 
               <Form.Group
@@ -94,7 +94,7 @@ function App() {
                 controlId="formBasicPassword"
               >
                 <Form.Label>Email:</Form.Label>
-                <Form.Control type="password" placeholder="Your email" />
+                <Form.Control type="email" placeholder="Your email" />
               </Form.Group>
               <Form.Group
                 className="mb-3 form-input"
