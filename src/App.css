@@ -86,3 +86,7 @@
 .bio {
   font-size: 1.4em;
 }
+
+.footer-content {
+  display: flex;
+}

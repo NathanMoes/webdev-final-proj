@@ -1,11 +1,5 @@
 import logo from "./logo.svg";
 import "./App.css";
-// import Button from "react-bootstrap/Button";
-// import Image from "react-bootstrap/Image";
-// import Container from "react-bootstrap/Container";
-// import Nav from "react-bootstrap/Nav";
-// import Navbar from "react-bootstrap/Navbar";
-// import Form from "react-bootstrap/Form";
 import {
   Button,
   Image,
@@ -115,20 +109,20 @@ function App() {
             <p>
               <b>Gif search (TypeScript, React, Ionic)</b>
               <br />
-              Created a website using the Giphy api to search for gifs by query,
-              and to view popular/trending gifs hosted on the giphy database.
+              <small className="mx-3">
+                Created a website using the Giphy api to search for gifs by
+                query, and to view popular/trending gifs hosted on the giphy
+                database.
+              </small>
             </p>
             <p>
               <b>PSU Walk-tober (TypeScript, React, Ionic, Firebase)</b>
               <br />
-              Worked with a team to create a replacement for the current
-              walk-tober system. As the current system is based on chalenge
-              runer, and lacks many features as well as visual refinement.
-            </p>
-            <p>
-              <b>Something else</b>
-              <br />
-              More info
+              <small className="mx-3">
+                Worked with a team to create a replacement for the current
+                walk-tober system. As the current system is based on chalenge
+                runer, and lacks many features as well as visual refinement.
+              </small>
             </p>
           </Col>
         </Row>
@@ -158,6 +152,7 @@ function App() {
                 className="mb-3 form-input"
                 controlId="formBasicCheckbox"
               >
+                <Form.Label>Your Message</Form.Label>
                 <Form.Control
                   type="text"
                   as="textarea"
@@ -173,6 +168,27 @@ function App() {
         </Row>
       </Container>
       <br />
+      <footer>
+        <Container className="mb-4">
+          <hr />
+          <Row>
+            <p className="mx-3">© 2023 Nathan Moes</p>
+          </Row>
+          <Row className="footer-content">
+            <Col>
+              <a href="https://www.linkedin.com/in/nathan-moes-569759209/">
+                <i class="fa-brands fa-linkedin fa-2xl mx-3"></i>
+              </a>
+              <a href="https://github.com/NathanMoes">
+                <i class="fa-brands fa-github fa-2xl mx-3"></i>
+              </a>
+              <a href="nathanmoes7@gmail.com">
+                <i class="fa-solid fa-envelope fa-2xl mx-3"></i>
+              </a>
+            </Col>
+          </Row>
+        </Container>
+      </footer>
     </>
   );
 }
