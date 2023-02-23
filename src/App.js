@@ -35,8 +35,8 @@ const analytics = getAnalytics(app);
 function App() {
   return (
     <>
-      <div className="d-flex justify-content-center mx-0 my-0 main">
-        <Container className="mx-0 mt-0 main-content">
+      <div className="d-flex justify-content-center mx-0 my-0 main px-0 py-0 bg-dark">
+        <Container className="m-0 main-content p-0">
           <Navbar bg="dark" variant="dark" sticky="top">
             <Container className="d-flex flex-row justify-content-start">
               <Navbar.Brand href="#home">Home</Navbar.Brand>
@@ -117,22 +117,36 @@ function App() {
             <Row>
               <Col>
                 <p>
-                  <b>Gif search (TypeScript, React, Ionic)</b>
+                  <b>
+                    Gif search (TypeScript, React, Ionic){" "}
+                    <a href="https://github.com/NathanMoes/mood-me-demo-app">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </b>
                   <br />
                   <small className="mx-3">
-                    Created a website using the Giphy api to search for gifs by
-                    query, and to view popular/trending gifs hosted on the giphy
-                    database.
+                    <a href="https://moodmedemo-549cd.web.app/tab1">
+                      Created a website using the Giphy api to search for gifs
+                      by query, and to view popular/trending gifs hosted on the
+                      giphy database.
+                    </a>
                   </small>
                 </p>
                 <p>
-                  <b>PSU Walk-tober (TypeScript, React, Ionic, Firebase)</b>
+                  <b>
+                    PSU Walk-tober (TypeScript, React, Ionic, Firebase){" "}
+                    <a href="https://github.com/psu-software-engineering-capstone/walktober">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </b>
                   <br />
                   <small className="mx-3">
-                    Worked with a team to create a replacement for the current
-                    walk-tober system. As the current system is based on
-                    chalenge runer, and lacks many features as well as visual
-                    refinement.
+                    <a href="https://psuwalktober.web.app/">
+                      Worked with a team to create a replacement for the current
+                      walk-tober system. As the current system is based on
+                      chalenge runer, and lacks many features as well as visual
+                      refinement.
+                    </a>
                   </small>
                 </p>
               </Col>
