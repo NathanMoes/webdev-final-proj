@@ -75,6 +75,27 @@ function App() {
       <Container>
         <Row>
           <Col>
+            <b>
+              <p className="ed">Education</p>
+            </b>
+          </Col>
+        </Row>
+        <Row className="mx-3">
+          <Col>
+            <p className="ed-school">
+              Portland State University
+              <br />
+              <small className="ed-school-desc">
+                Bachelor of Science, Computer Science 3.69 GPA Winter 2023
+              </small>
+            </p>
+          </Col>
+        </Row>
+      </Container>
+      <br />
+      <Container>
+        <Row>
+          <Col>
             <p>
               <b>Gif search (TypeScript, React, Ionic)</b>
               <br />

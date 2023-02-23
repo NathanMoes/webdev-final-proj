@@ -64,3 +64,17 @@
     width: 30vw;
   }
 }
+
+.ed {
+  font-size: 2.5em;
+}
+
+.ed-school {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.ed-school-desc {
+  font-size: 0.7em;
+  font-style: italic;
+}
