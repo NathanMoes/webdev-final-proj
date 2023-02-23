@@ -111,6 +111,38 @@ function App() {
                 <p className="lang-list">HTML/XML/CSS</p>
               </Col>
             </Row>
+            <Row>
+              <Col>
+                <b>
+                  <p className="ed">CS Courses I've enjoyed</p>
+                </b>
+              </Col>
+            </Row>
+            <Row className="mx-3">
+              <Col>
+                <p className="">CS 447p Computer Graphics</p>
+              </Col>
+            </Row>
+            <Row className="mx-3">
+              <Col>
+                <p className="">CS 410P ADV programming in Java</p>
+              </Col>
+            </Row>
+            <Row className="mx-3">
+              <Col>
+                <p className="">CS 441 Artifical Inteligence</p>
+              </Col>
+            </Row>
+            <Row className="mx-3">
+              <Col>
+                <p className="">CS 445 Machine learning</p>
+              </Col>
+            </Row>
+            <Row className="mx-3">
+              <Col>
+                <p className="">CS 463 Intro to Web developemnt</p>
+              </Col>
+            </Row>
           </Container>
           <br />
           <Container id="projects">
@@ -156,7 +188,7 @@ function App() {
           <Container className="box-size" id="contactMe">
             <Row>
               <Col>
-                <Form className="">
+                <Form className="border p-4 border-white rounded">
                   <h2>Contact Me</h2>
                   <Form.Group
                     className="mb-3 form-input"
