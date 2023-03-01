@@ -196,6 +196,23 @@ function App() {
                     ML.
                   </small>
                 </p>
+
+                <p>
+                  <b>
+                    Twitter like application{" "}
+                    <a href="https://github.com/NathanMoes/twiter-clone">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </b>
+                  <br />
+                  <small className="mx-3">
+                    Working on a small application that resembles twitter. It
+                    uses mongoDB to store information for the application,
+                    including user info, tweets, etc. Backend is build on
+                    node.js and express. Front end is built on Ionic, and
+                    react.js.
+                  </small>
+                </p>
               </Col>
             </Row>
           </Container>
