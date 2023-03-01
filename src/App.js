@@ -60,16 +60,16 @@ function App() {
               </Col>
               <Col sm="12" md="12" lg="6">
                 <p className="mt-5 ml-5 bio">
-                  I am a PSU student with my bachlors of science in comuter
+                  I am a PSU student with my bachelors of science in computer
                   science. I will be continuing on to my masters in the fall of
-                  2024. I am interested in fullstack developemnt, android/ios
-                  developemnt and ai/ml. I have worked on many small projects
-                  related to webdevelopment and am currently working on more.
+                  2024. I am interested in fullstack development, android/ios
+                  development and ai/ml. I have worked on many small projects
+                  related to web-development and am currently working on more.
                   With the same being said for android and ai/ml projects. As
                   well as some small python projects. Most recently I worked on
                   creating a web application that allows for users to search for
                   gifs using the giphy api, and to display the current most
-                  treding gifs on a seperate tab.
+                  trending gifs on a separate tab.
                 </p>
               </Col>
             </Row>
@@ -98,7 +98,7 @@ function App() {
             <Row>
               <Col>
                 <b>
-                  <p className="ed">Programing Languages</p>
+                  <p className="ed">Programming Languages</p>
                 </b>
               </Col>
             </Row>
@@ -130,7 +130,7 @@ function App() {
             </Row>
             <Row className="mx-3">
               <Col>
-                <p className="">CS 441 Artifical Inteligence</p>
+                <p className="">CS 441 Artificial Intelligence</p>
               </Col>
             </Row>
             <Row className="mx-3">
@@ -140,7 +140,7 @@ function App() {
             </Row>
             <Row className="mx-3">
               <Col>
-                <p className="">CS 463 Intro to Web developemnt</p>
+                <p className="">CS 463 Intro to Web development</p>
               </Col>
             </Row>
           </Container>
@@ -176,8 +176,8 @@ function App() {
                     <a href="https://psuwalktober.web.app/">
                       Worked with a team to create a replacement for the current
                       walk-tober system. As the current system is based on
-                      chalenge runer, and lacks many features as well as visual
-                      refinement.
+                      challenge runner, and lacks many features as well as
+                      visual refinement.
                     </a>
                   </small>
                 </p>
