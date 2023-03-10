@@ -33,13 +33,27 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 function App() {
+  const submitHandler = (ev) => {
+    ev.preventDefault();
+    document.querySelector("#contact-form").reset();
+  };
+
+  const submitHandlerAutoFillEmail = (ev) => {
+    ev.preventDefault();
+    const emailBody = document.querySelector("#input-body");
+    const name = document.querySelector("#input-name");
+    window.open(
+      `mailto:nathanmoes7@gmail.com?subject=ContactForm-${name.value}&body=${emailBody.value}`
+    );
+    document.querySelector("#contact-form").reset();
+  };
+
   return (
     <>
       <div className="d-flex justify-content-center mx-0 my-0 main px-0 py-0 bg-dark">
         <Container className="m-0 main-content p-0">
           <Navbar bg="dark" variant="dark" sticky="top">
             <Container className="d-flex flex-row justify-content-start">
-              <Navbar.Brand href="#home">Home</Navbar.Brand>
               <Nav className="me-auto">
                 <Nav.Link href="#about">About</Nav.Link>
                 <Nav.Link href="#projects">Projects</Nav.Link>
@@ -48,14 +62,15 @@ function App() {
             </Container>
           </Navbar>
           <Container id="about" className="mt-3">
+            <h1 className="header-name">Nathan Moes</h1>
             <Row>
               <Col sm="12" md="12" lg="6">
                 <Image
                   src="https://avatars.githubusercontent.com/u/91927252?v=4"
-                  alt="Nathan Moes selfie"
+                  alt="A selfie of Nathan Moes smiling with glasses on and a nice blue shirt"
                   className="mx-0 pfp"
                   thumbnail={true}
-                  roundedCircle={true}
+                  roundedCircle
                 ></Image>
               </Col>
               <Col sm="12" md="12" lg="6">
@@ -80,7 +95,7 @@ function App() {
             <Row>
               <Col>
                 <b>
-                  <p className="ed">Education</p>
+                  <h2 className="ed">Education</h2>
                 </b>
               </Col>
             </Row>
@@ -98,7 +113,7 @@ function App() {
             <Row>
               <Col>
                 <b>
-                  <p className="ed">Programming Languages</p>
+                  <h2 className="ed">Programming Languages</h2>
                 </b>
               </Col>
             </Row>
@@ -114,7 +129,7 @@ function App() {
             <Row>
               <Col>
                 <b>
-                  <p className="ed">CS Courses I've enjoyed</p>
+                  <h2 className="ed">CS Courses I've enjoyed</h2>
                 </b>
               </Col>
             </Row>
@@ -146,12 +161,19 @@ function App() {
           </Container>
           <br />
           <Container id="projects">
-            <Row>
+            <h2 className="ed mb-0" id="projects-title">
+              Projects
+            </h2>
+            <br />
+            <Row className="mx-2">
               <Col>
                 <p>
                   <b>
                     Gif search (TypeScript, React, Ionic){" "}
-                    <a href="https://github.com/NathanMoes/mood-me-demo-app">
+                    <a
+                      href="https://github.com/NathanMoes/mood-me-demo-app"
+                      aria-label="GitHub repo Gif search"
+                    >
                       <i class="fa-brands fa-github"></i>
                     </a>
                   </b>
@@ -167,7 +189,10 @@ function App() {
                 <p>
                   <b>
                     PSU Walk-tober (TypeScript, React, Ionic, Firebase){" "}
-                    <a href="https://github.com/psu-software-engineering-capstone/walktober">
+                    <a
+                      href="https://github.com/psu-software-engineering-capstone/walktober"
+                      aria-label="GitHub repo for PSU walk-tober event"
+                    >
                       <i class="fa-brands fa-github"></i>
                     </a>
                   </b>
@@ -185,7 +210,10 @@ function App() {
                 <p>
                   <b>
                     Housing price predictor{" "}
-                    <a href="https://github.com/NathanMoes/CS445_group_project_housing">
+                    <a
+                      href="https://github.com/NathanMoes/CS445_group_project_housing"
+                      aria-label="GitHub repo for housing price predictor"
+                    >
                       <i class="fa-brands fa-github"></i>
                     </a>
                   </b>
@@ -200,7 +228,10 @@ function App() {
                 <p>
                   <b>
                     Twitter like application{" "}
-                    <a href="https://github.com/NathanMoes/twiter-clone">
+                    <a
+                      href="https://github.com/NathanMoes/twiter-clone"
+                      aria-label="GitHub repo for twitter like app"
+                    >
                       <i class="fa-brands fa-github"></i>
                     </a>
                   </b>
@@ -220,14 +251,21 @@ function App() {
           <Container className="box-size" id="contactMe">
             <Row>
               <Col>
-                <Form className="border p-4 border-white rounded">
+                <Form
+                  className="border p-4 border-white rounded"
+                  id="contact-form"
+                >
                   <h2>Contact Me</h2>
                   <Form.Group
                     className="mb-3 form-input"
                     controlId="formBasicEmail"
                   >
                     <Form.Label>Name</Form.Label>
-                    <Form.Control type="text" placeholder="Your name" />
+                    <Form.Control
+                      type="text"
+                      placeholder="Your name"
+                      id="input-name"
+                    />
                   </Form.Group>
 
                   <Form.Group
@@ -235,7 +273,11 @@ function App() {
                     controlId="formBasicPassword"
                   >
                     <Form.Label>Email:</Form.Label>
-                    <Form.Control type="email" placeholder="Your email" />
+                    <Form.Control
+                      type="email"
+                      placeholder="Your email"
+                      id="input-email"
+                    />
                   </Form.Group>
                   <Form.Group
                     className="mb-3 form-input"
@@ -247,10 +289,24 @@ function App() {
                       as="textarea"
                       placeholder="enter optional message"
                       className="pb-5"
+                      id="input-body"
                     ></Form.Control>
                   </Form.Group>
-                  <Button variant="primary" type="submit" className="">
+                  <Button
+                    variant="primary"
+                    type="submit"
+                    className=""
+                    onClick={submitHandler}
+                  >
                     Submit
+                  </Button>
+                  <Button
+                    variant="primary"
+                    type="submit"
+                    className="mx-3"
+                    onClick={submitHandlerAutoFillEmail}
+                  >
+                    Send as Email
                   </Button>
                 </Form>
               </Col>
@@ -265,13 +321,16 @@ function App() {
               </Row>
               <Row className="footer-content">
                 <Col>
-                  <a href="https://www.linkedin.com/in/nathan-moes-569759209/">
+                  <a
+                    href="https://www.linkedin.com/in/nathan-moes-569759209/"
+                    aria-label="LinkedIn"
+                  >
                     <i class="fa-brands fa-linkedin fa-2xl mx-3"></i>
                   </a>
-                  <a href="https://github.com/NathanMoes">
+                  <a href="https://github.com/NathanMoes" aria-label="GitHub">
                     <i class="fa-brands fa-github fa-2xl mx-3"></i>
                   </a>
-                  <a href="mailto:nathanmoes7@gmail.com">
+                  <a href="mailto:nathanmoes7@gmail.com" aria-label="Email">
                     <i class="fa-solid fa-envelope fa-2xl mx-3"></i>
                   </a>
                 </Col>

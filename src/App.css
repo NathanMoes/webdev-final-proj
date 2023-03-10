@@ -107,3 +107,34 @@
 .main-content {
   width: 100vw;
 }
+
+.header-name {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 4em;
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #d0d2ff;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fffdd0;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
