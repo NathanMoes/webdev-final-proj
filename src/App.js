@@ -260,7 +260,7 @@ function App() {
                     className="mb-3 form-input"
                     controlId="formBasicEmail"
                   >
-                    <Form.Label>Name</Form.Label>
+                    <Form.Label for="input-name">Name</Form.Label>
                     <Form.Control
                       type="text"
                       placeholder="Your name"
@@ -272,7 +272,7 @@ function App() {
                     className="mb-3 form-input"
                     controlId="formBasicPassword"
                   >
-                    <Form.Label>Email:</Form.Label>
+                    <Form.Label for="input-email">Email:</Form.Label>
                     <Form.Control
                       type="email"
                       placeholder="Your email"
@@ -283,7 +283,7 @@ function App() {
                     className="mb-3 form-input"
                     controlId="formBasicCheckbox"
                   >
-                    <Form.Label>Your Message</Form.Label>
+                    <Form.Label for="input-body">Your Message</Form.Label>
                     <Form.Control
                       type="text"
                       as="textarea"
