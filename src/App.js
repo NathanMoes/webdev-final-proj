@@ -174,7 +174,7 @@ function App() {
                       href="https://github.com/NathanMoes/mood-me-demo-app"
                       aria-label="GitHub repo Gif search"
                     >
-                      <i class="fa-brands fa-github"></i>
+                      <i className="fa-brands fa-github"></i>
                     </a>
                   </b>
                   <br />
@@ -193,7 +193,7 @@ function App() {
                       href="https://github.com/psu-software-engineering-capstone/walktober"
                       aria-label="GitHub repo for PSU walk-tober event"
                     >
-                      <i class="fa-brands fa-github"></i>
+                      <i className="fa-brands fa-github"></i>
                     </a>
                   </b>
                   <br />
@@ -214,7 +214,7 @@ function App() {
                       href="https://github.com/NathanMoes/CS445_group_project_housing"
                       aria-label="GitHub repo for housing price predictor"
                     >
-                      <i class="fa-brands fa-github"></i>
+                      <i className="fa-brands fa-github"></i>
                     </a>
                   </b>
                   <br />
@@ -232,7 +232,7 @@ function App() {
                       href="https://github.com/NathanMoes/twiter-clone"
                       aria-label="GitHub repo for twitter like app"
                     >
-                      <i class="fa-brands fa-github"></i>
+                      <i className="fa-brands fa-github"></i>
                     </a>
                   </b>
                   <br />
@@ -256,11 +256,8 @@ function App() {
                   id="contact-form"
                 >
                   <h2>Contact Me</h2>
-                  <Form.Group
-                    className="mb-3 form-input"
-                    controlId="formBasicEmail"
-                  >
-                    <Form.Label for="input-name">Name</Form.Label>
+                  <Form.Group className="mb-3 form-input">
+                    <Form.Label htmlFor="input-name">Name</Form.Label>
                     <Form.Control
                       type="text"
                       placeholder="Your name"
@@ -268,22 +265,16 @@ function App() {
                     />
                   </Form.Group>
 
-                  <Form.Group
-                    className="mb-3 form-input"
-                    controlId="formBasicPassword"
-                  >
-                    <Form.Label for="input-email">Email:</Form.Label>
+                  <Form.Group className="mb-3 form-input">
+                    <Form.Label htmlFor="input-email">Email:</Form.Label>
                     <Form.Control
                       type="email"
                       placeholder="Your email"
                       id="input-email"
                     />
                   </Form.Group>
-                  <Form.Group
-                    className="mb-3 form-input"
-                    controlId="formBasicCheckbox"
-                  >
-                    <Form.Label for="input-body">Your Message</Form.Label>
+                  <Form.Group className="mb-3 form-input">
+                    <Form.Label htmlFor="input-body">Your Message</Form.Label>
                     <Form.Control
                       type="text"
                       as="textarea"
@@ -325,13 +316,13 @@ function App() {
                     href="https://www.linkedin.com/in/nathan-moes-569759209/"
                     aria-label="LinkedIn"
                   >
-                    <i class="fa-brands fa-linkedin fa-2xl mx-3"></i>
+                    <i className="fa-brands fa-linkedin fa-2xl mx-3"></i>
                   </a>
                   <a href="https://github.com/NathanMoes" aria-label="GitHub">
-                    <i class="fa-brands fa-github fa-2xl mx-3"></i>
+                    <i className="fa-brands fa-github fa-2xl mx-3"></i>
                   </a>
                   <a href="mailto:nathanmoes7@gmail.com" aria-label="Email">
-                    <i class="fa-solid fa-envelope fa-2xl mx-3"></i>
+                    <i className="fa-solid fa-envelope fa-2xl mx-3"></i>
                   </a>
                 </Col>
               </Row>
