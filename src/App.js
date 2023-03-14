@@ -102,7 +102,7 @@ function App() {
           <Container id="about" className="mt-3">
             <h1 className="header-name">Nathan Moes</h1>
             <Row>
-              <Col sm="12" md="12" lg="6">
+              <Col sm="12" md="12" lg="6" className="pfp-image">
                 <Image
                   src="https://avatars.githubusercontent.com/u/91927252?v=4"
                   alt="A selfie of Nathan Moes smiling with glasses on and a nice blue shirt"

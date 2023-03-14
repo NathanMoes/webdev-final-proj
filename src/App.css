@@ -153,3 +153,8 @@ a:active {
 .unique:hover {
   border: #fffdd0 2px solid;
 }
+
+.pfp-image {
+  display: flex;
+  justify-content: center;
+}
