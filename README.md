@@ -3,6 +3,10 @@
 This project is a personal portfolio page in conjunction with an assigment for my intro to web development class. Libraries used are react, react-bootstrap, and firebase.
 Project is a website deployed to firebase at https://personalpage-65cf1.web.app/ . Outside soruces used are only the refrence projects of other students.
 
+# rating system
+
+based on https://dev.to/leonardoschmittk/how-to-make-a-star-rating-with-js-36d3
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
