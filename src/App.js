@@ -13,7 +13,7 @@ import {
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -37,6 +37,29 @@ function App() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [emailBody, setEmailBody] = useState("");
+  const [stars, setStars] = useState([]);
+
+  useEffect(() => {
+    setStars([...document.getElementsByClassName("rating__star")]);
+  }, []);
+
+  const executeRating = () => {
+    const starClassActive = "rating__star fas fa-star";
+    const starClassInactive = "rating__star far fa-star";
+    const starsLength = stars.length;
+    let i;
+    stars.map((star) => {
+      star.onclick = () => {
+        i = stars.indexOf(star);
+
+        if (star.className === starClassInactive) {
+          for (i; i >= 0; --i) stars[i].className = starClassActive;
+        } else {
+          for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
+        }
+      };
+    });
+  };
 
   const resetHandler = (ev) => {
     ev.preventDefault();
@@ -363,6 +386,16 @@ function App() {
                     >
                       Reset
                     </Button>
+                    <div
+                      className="star-rating mx-5 mt-2"
+                      onClick={executeRating}
+                    >
+                      <i class="rating__star far fa-star"></i>
+                      <i class="rating__star far fa-star"></i>
+                      <i class="rating__star far fa-star"></i>
+                      <i class="rating__star far fa-star"></i>
+                      <i class="rating__star far fa-star"></i>
+                    </div>
                   </div>
                 </Form>
               </Col>
