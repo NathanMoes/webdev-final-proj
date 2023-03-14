@@ -38,6 +38,11 @@ function App() {
   const [email, setEmail] = useState("");
   const [emailBody, setEmailBody] = useState("");
 
+  const resetHandler = (ev) => {
+    ev.preventDefault();
+    document.querySelector("#contact-form").reset();
+  };
+
   const submitHandler = (ev) => {
     const emailBody = document.querySelector("#input-body");
     const name = document.querySelector("#input-name");
@@ -295,6 +300,9 @@ function App() {
                       type="text"
                       placeholder="Your name"
                       id="input-name"
+                      onChange={(ev) => {
+                        setName(ev.target.value);
+                      }}
                     />
                   </Form.Group>
 
@@ -304,6 +312,9 @@ function App() {
                       type="email"
                       placeholder="Your email"
                       id="input-email"
+                      onChange={(ev) => {
+                        setEmail(ev.target.value);
+                      }}
                     />
                   </Form.Group>
                   <Form.Group className="mb-3 form-input">
@@ -340,6 +351,7 @@ function App() {
                       variant="primary"
                       type="reset"
                       className="mx-0 btn-danger"
+                      onClick={resetHandler}
                     >
                       Reset
                     </Button>
