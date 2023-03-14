@@ -13,6 +13,7 @@ import {
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { useState } from "react";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -33,7 +34,33 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 function App() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [emailBody, setEmailBody] = useState("");
+
   const submitHandler = (ev) => {
+    const emailBody = document.querySelector("#input-body");
+    const name = document.querySelector("#input-name");
+    const email = document.querySelector("#input-email");
+    const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    let validEmail = regex.test(String(email.value).toLowerCase());
+    if (String(name.value).length < 7) {
+      alert("Please enter a name for the form, including first and last.");
+      ev.preventDefault();
+      return;
+    }
+    if (!validEmail) {
+      alert("Invalid email. Please enter a valid email address.");
+      ev.preventDefault();
+      return;
+    }
+    if (String(emailBody.value).length < 50) {
+      alert(
+        "please enter at least 50 characters for your message, and try again."
+      );
+      ev.preventDefault();
+      return;
+    }
     ev.preventDefault();
     document.querySelector("#contact-form").reset();
   };
@@ -55,9 +82,15 @@ function App() {
           <Navbar bg="dark" variant="dark" sticky="top">
             <Container className="d-flex flex-row justify-content-start">
               <Nav className="me-auto">
-                <Nav.Link href="#about">About</Nav.Link>
-                <Nav.Link href="#projects">Projects</Nav.Link>
-                <Nav.Link href="#contactMe">Contact</Nav.Link>
+                <Nav.Link href="#about" className="unique">
+                  About
+                </Nav.Link>
+                <Nav.Link href="#projects" className="unique">
+                  Projects
+                </Nav.Link>
+                <Nav.Link href="#contactMe" className="unique">
+                  Contact
+                </Nav.Link>
               </Nav>
             </Container>
           </Navbar>
@@ -281,24 +314,36 @@ function App() {
                       placeholder="enter optional message"
                       className="pb-5"
                       id="input-body"
+                      onChange={(ev) => {
+                        setEmailBody(ev.target.value);
+                      }}
                     ></Form.Control>
                   </Form.Group>
-                  <Button
-                    variant="primary"
-                    type="submit"
-                    className=""
-                    onClick={submitHandler}
-                  >
-                    Submit
-                  </Button>
-                  <Button
-                    variant="primary"
-                    type="submit"
-                    className="mx-3"
-                    onClick={submitHandlerAutoFillEmail}
-                  >
-                    Send as Email
-                  </Button>
+                  <div className="d-flex">
+                    <Button
+                      variant="primary"
+                      type="submit"
+                      className=""
+                      onClick={submitHandler}
+                    >
+                      Submit
+                    </Button>
+                    <Button
+                      variant="primary"
+                      type="submit"
+                      className="mx-3"
+                      onClick={submitHandlerAutoFillEmail}
+                    >
+                      Send as Email
+                    </Button>
+                    <Button
+                      variant="primary"
+                      type="reset"
+                      className="mx-0 btn-danger"
+                    >
+                      Reset
+                    </Button>
+                  </div>
                 </Form>
               </Col>
             </Row>
