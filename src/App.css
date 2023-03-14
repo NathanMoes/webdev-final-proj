@@ -163,6 +163,9 @@ a:active {
 
 .star-rating {
   width: 180px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
 
 .rating__star {

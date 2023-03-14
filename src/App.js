@@ -386,21 +386,12 @@ function App() {
                     >
                       Reset
                     </Button>
-                    <div
-                      className="star-rating mx-5 mt-2"
-                      onClick={executeRating}
-                    >
-                      <i class="rating__star far fa-star"></i>
-                      <i class="rating__star far fa-star"></i>
-                      <i class="rating__star far fa-star"></i>
-                      <i class="rating__star far fa-star"></i>
-                      <i class="rating__star far fa-star"></i>
-                    </div>
                   </div>
                 </Form>
               </Col>
             </Row>
           </Container>
+
           <br />
           <footer>
             <Container className="mb-4">
@@ -422,6 +413,21 @@ function App() {
                   <a href="mailto:nathanmoes7@gmail.com" aria-label="Email">
                     <i className="fa-solid fa-envelope fa-2xl mx-3"></i>
                   </a>
+                </Col>
+                <Col>
+                  <div
+                    className="star-rating mx-5 mt-2"
+                    onClick={executeRating}
+                    id="stars-rating-system"
+                    aria-label="star rating"
+                  >
+                    rate this site
+                    <i class="rating__star far fa-star"></i>
+                    <i class="rating__star far fa-star"></i>
+                    <i class="rating__star far fa-star"></i>
+                    <i class="rating__star far fa-star"></i>
+                    <i class="rating__star far fa-star"></i>
+                  </div>
                 </Col>
               </Row>
             </Container>
