@@ -113,16 +113,22 @@ function App() {
               </Col>
               <Col sm="12" md="12" lg="6">
                 <p className="mt-5 ml-5 bio">
-                  I am a PSU student with my bachelors of science in computer
-                  science. I will be continuing on to my masters in the fall of
-                  2024. I am interested in fullstack development, android/ios
-                  development and ai/ml. I have worked on many small projects
-                  related to web-development and am currently working on more.
-                  With the same being said for android and ai/ml projects. As
-                  well as some small python projects. Most recently I worked on
-                  creating a web application that allows for users to search for
-                  gifs using the giphy api, and to display the current most
-                  trending gifs on a separate tab.
+                  I am Nathan Moes, a current undergrad student at PSU majoring
+                  in Computer Science. In my time at PSU I have been fortunate
+                  enough to have taken many courses on programming, logic, and
+                  software engineering. Though, what stood out most to me was
+                  web development. Largely for its vast use in many different
+                  industries. I have worked with a small team at PSU for my
+                  computer science capstone to create a web based application to
+                  replace the current system in place for the walk-tober event.
+                  The event is an initiative to try and get people more active
+                  and to form communities. That is why I worked together with my
+                  team to create features to allow for greater communication
+                  between participants, and make the design of the application
+                  more interactive/visually appealing. My passion for web
+                  development extends beyond just professional, as I dedicate
+                  much of my time to learning as much as I can including new
+                  frameworks to build on my knowledge.
                 </p>
               </Col>
             </Row>
@@ -286,6 +292,8 @@ function App() {
             </Row>
           </Container>
           <br />
+          <hr></hr>
+          <br />
           <Container className="box-size" id="contactMe">
             <Row>
               <Col>
@@ -392,7 +400,3 @@ function App() {
 }
 
 export default App;
-
-/* 
-I am Nathan Moes, a current undergrad student at PSU majoring in Computer Science. In my time at PSU I have been fortunate enough to have taken many courses on programming, logic, and software engineering. Though, what stood out most to me was web development. Largely for its vast use in many different industries. I have worked with a small team at PSU for my computer science capstone to create a web based application to replace the current system in place for the walk-tober event. The event is an initiative to try and get people more active and to form communities. That is why I worked together with my team to create features to allow for greater communication between participants, and make the design of the application more interactive/visually appealing. My passion for web development extends beyond just professional, as I dedicate much of my time to learning as much as I can including new frameworks to build on my knowledge.
-*/
