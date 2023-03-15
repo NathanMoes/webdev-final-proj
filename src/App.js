@@ -61,7 +61,6 @@ function App() {
         }
       };
     });
-    console.log(rating);
   };
 
   const resetHandler = (ev) => {
