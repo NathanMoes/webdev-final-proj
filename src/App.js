@@ -38,6 +38,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [emailBody, setEmailBody] = useState("");
   const [stars, setStars] = useState([]);
+  const [rating, setRating] = useState(5);
 
   useEffect(() => {
     setStars([...document.getElementsByClassName("rating__star")]);
@@ -48,6 +49,7 @@ function App() {
     const starClassInactive = "rating__star far fa-star";
     const starsLength = stars.length;
     let i;
+
     stars.map((star) => {
       star.onclick = () => {
         i = stars.indexOf(star);
@@ -59,6 +61,7 @@ function App() {
         }
       };
     });
+    console.log(rating);
   };
 
   const resetHandler = (ev) => {
@@ -98,7 +101,9 @@ function App() {
     const emailBody = document.querySelector("#input-body");
     const name = document.querySelector("#input-name");
     window.open(
-      `mailto:nathanmoes7@gmail.com?subject=ContactForm-${name.value}&body=${emailBody.value}`
+      `mailto:nathanmoes7@gmail.com?subject=ContactForm-${
+        name.value + ", rating:" + rating
+      }&body=${emailBody.value}`
     );
     document.querySelector("#contact-form").reset();
   };
@@ -414,7 +419,7 @@ function App() {
                     <i className="fa-solid fa-envelope fa-2xl mx-3"></i>
                   </a>
                 </Col>
-                <Col>
+                <Col className="d-flex">
                   <div
                     className="star-rating mx-5 mt-2"
                     onClick={executeRating}
@@ -422,11 +427,36 @@ function App() {
                     aria-label="star rating"
                   >
                     rate this site
-                    <i class="rating__star far fa-star"></i>
-                    <i class="rating__star far fa-star"></i>
-                    <i class="rating__star far fa-star"></i>
-                    <i class="rating__star far fa-star"></i>
-                    <i class="rating__star far fa-star"></i>
+                    <i
+                      class="rating__star far fa-star"
+                      onClick={() => {
+                        setRating(1);
+                      }}
+                    ></i>
+                    <i
+                      class="rating__star far fa-star"
+                      onClick={() => {
+                        setRating(2);
+                      }}
+                    ></i>
+                    <i
+                      class="rating__star far fa-star"
+                      onClick={() => {
+                        setRating(3);
+                      }}
+                    ></i>
+                    <i
+                      class="rating__star far fa-star"
+                      onClick={() => {
+                        setRating(4);
+                      }}
+                    ></i>
+                    <i
+                      class="rating__star far fa-star"
+                      onClick={() => {
+                        setRating(5);
+                      }}
+                    ></i>
                   </div>
                 </Col>
               </Row>
